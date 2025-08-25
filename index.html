@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thaja Mart</title>
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/index.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<header>
+  <div class="info-container">
+    <div class="address-container">
+      <p class="address">
+        JNTU Metro Piller No:678, Hyderabad, India.
+      </p>
+      <p class="email-address">
+        thajafruitmart@gmail.com
+      </p>
+    </div>
+    <div class="policy-container">
+      <p class="privacy">
+        <a href="">Privacy Policy</a>
+      </p> /
+      <p class="terms">
+        <a href="">Terms Of Use</a>
+      </p> /
+      <p class="refund-policy">
+        <a href="">Refund Policy</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="nav-container">
+    <div class="title">ORGANIC</div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./shop.html">Shop</a></li>
+        <li><a href="./shop-details.html">Shop-Details</a></li>
+        <li><a href="">Blogs</a></li>
+      </ul>
+    </nav>
+    <div class="user-details-container">
+      <ul>
+        <li>
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </li>
+        <li>
+          <a href="./wishlist.html">
+            <button>
+              <i class="fa-solid fa-heart"></i><sup>0</sup>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="./cart.html">
+            <button>
+              <i class="fa-solid fa-cart-plus"></i><sup>0</sup>
+            </button>
+          </a>
+        </li>
+        <li class="user-detail">
+          <a href="/forms/login-form.html">
+            <button><i class="fa-solid fa-users"></i></button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+    <section class="carousel-section">
+        <div class="details-container">
+            <div class="Min-head">
+                100% Organic Food
+            </div>
+            <div class="Title">
+                Organic Veggies & Fruits Feeds
+            </div>
+            <div class="Search-bar">
+                <input type="text" placeholder="Search Products...">
+                <button>Submit Now</button>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="./assets/Carousle-Section.jpg" alt="Fruit image">
+        </div>
+    </section>
+
+    <section>
+        <div class="features">
+            <div class="feature-box">
+                <div class="icon"><img src="./assets/Car.png" alt=""></div>
+                <h3>🚗 Free Shipping</h3>
+                <p>Free on order over $300</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon"><img src="./assets/Secure.png" alt=""></div>
+                <h3>🛡️ Security Payment</h3>
+                <p>100% security payment</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon"><img src="./assets/Return.png" alt=""></div>
+                <h3>🔁 30 Day Return</h3>
+                <p>30 day money guarantee</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon"><img src="./assets/Time.png" alt=""></div>
+                <h3>📞 24/7 Support</h3>
+                <p>Support every time fast</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-container">
+        <div class="products-options-container">
+            <div class="title">Our Organic Products</div>
+            <div class="options-container">
+                <div id="all-filter" class="options">All Products</div>
+                <div id="beauty-filter" class="options">Beauty</div>
+                <div id="fragrances-filter" class="options">Fragrances</div>
+                <div id="furniture-filter" class="options">Furniture</div>
+                <div id="groceries-filter" class="options">Groceries</div>
+            </div>
+        </div>
+        <div class="product-items-container" id="displayProducts"></div>
+    </section>
+</main>
+
+<section class="client">
+  <div class="client-header">
+    <p class="sub-title1">Our Testimonial</p>
+    <h2 class="title1">Our Client Saying!</h2>
+    <div class="nav-buttons">
+      <button class="nav-btn">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+      <button class="nav-btn">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="client-cards">
+    <div class="client-card">
+      <p class="client-description">
+        Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry’s standard dummy text ever since the 1500s,
+      </p>
+      <hr>
+      <div class="client-info">
+        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="client" class="client-img">
+        <div>
+          <h3>Client Name</h3>
+          <p>Profession</p>
+          <div class="stars">&#9733&#9733&#9733&#9733&#9734</div>
+        </div>
+        <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+      </div>
+    </div>
+
+    <div class="client-card">
+      <p class="client-description">
+        Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry’s standard dummy text ever since the 1500s,
+      </p>
+      <hr>
+      <div class="client-info">
+        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="client" class="client-img">
+        <div>
+          <h3>Client Name</h3>
+          <p>Profession</p>
+          <div class="stars">&#9733&#9733&#9733&#9733&#9734</div>
+        </div>
+        <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-top">
+    <input type="email" placeholder="Your Email" />
+    <button>Subscribe Now</button>
+  </div>
+  <div class="footer-cols">
+    <div>
+      <h3>Fruitables</h3>
+      <p>Fresh products</p>
+    </div>
+    <div>
+      <h4>Shop Info</h4>
+      <p>About Us</p>
+      <p>Contact Us</p>
+      <p>Privacy Policy</p>
+    </div>
+    <div>
+      <h4>Account</h4>
+      <p>My Account</p>
+      <p>Wishlist</p>
+      <p>Shopping Cart</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Email: example@gmail.com</p>
+      <p>Phone: +0123 4567 8910</p>
+    </div>
+  </div>
+  <p class="copyright">
+    &copy; 2025 PurePluck Fruitables. All rights reserved.
+  </p>
+</footer>
+
+<!-- Scripts -->
+<script src="./script/index.js"></script>
+<script src="./script/header.js"></script>
+<script src="https://kit.fontawesome.com/06a4476028.js" crossorigin="anonymous"></script>
+</body>
+</html>

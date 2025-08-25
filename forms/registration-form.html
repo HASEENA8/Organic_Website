@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration</title>
+  <link rel="stylesheet" href="/styles/header.css">
+  <link rel="stylesheet" href="/styles/registration-form.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="info-container">
+      <div class="address-container">
+        <p class="address">
+          JNTU Metro Piller No:678, Hyderabad, India.
+        </p>
+        <p class="email-address">
+          thajafruitmart@gmail.com
+        </p>
+      </div>
+      <div class="policy-container">
+        <p class="privacy">
+          <a href="">Privacy Policy</a>
+        </p>/
+        <p class="terms">
+          <a href="">Terms Of Use</a>
+        </p>/
+        <p class="refund-policy">
+          <a href="">Refund Policy</a>
+        </p>
+      </div>
+    </div>
+    <div class="nav-container">
+      <div class="title">ORGANIC</div>
+      <nav>
+        <ul>
+          <li>
+            <a href="/index.html">Home</a>
+          </li>
+          <li>
+            <a href="/shop.html">Shop</a>
+          </li>
+            <li>
+              <a href="/shop-details.html">Shop-Details</a>
+            </li>
+            <li>
+              <a href="">blogs</a>
+            </li>
+
+        </ul>
+      </nav>
+      <div class="user-details-container">
+        <ul>
+          <li>
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          </li>
+          <li>
+            <a href="/forms/login-form.html">
+              <button><i class="fa-solid fa-users"></i></button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+  <h1 class="title">Register</h1>
+  <form id="registrationForm">
+    <div>
+      <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+        <div class="name-error error"></div>
+        <div class="name-success success"></div>
+    </div>
+    <div>
+      <input type="email" name="email" id="email" placeholder="Enter Your E-mail" required>
+        <div class="email-error error"></div>
+        <div class="email-success success"></div>
+    </div>
+    <div>
+      <input type="tel" name="tel" id="tel" placeholder="Enter Your Phone Number" required>
+        <div class="phone-error error"></div>
+        <div class="phone-success success"></div>
+    </div>
+    <div>
+      <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+        <div class="password-error error"></div>
+        <div class="password-success success"></div>
+    </div>
+    <div>
+      <input type="password" name="recheckPassword" id="confirmPassword" placeholder="Re-enter Your Password" required>
+        <div class="confirm-error error"></div>
+        <div class="confirm-success success"></div>
+    </div>
+    <div class="button-container">
+      <button type="submit">Sign Up</button>
+      <button type="reset">Cancel</button>
+    </div>
+  </form>
+  <div class="toast-bar">
+  </div>
+</main>
+</body>
+<script src="/script/registration-form.js"></script>
+</html>

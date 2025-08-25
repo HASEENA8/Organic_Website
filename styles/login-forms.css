@@ -1,0 +1,176 @@
+
+/* Login Section */
+.login{
+    background-image:url(http://127.0.0.1:3000/forms/images/appricot.jpg);
+  background-size: cover;                 
+  background-repeat: no-repeat;             
+  background-position: center center;
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: #354bd7;
+  border-radius: 30px;
+  padding: 20px;
+  font-size: 40px;
+}
+
+.nav-links {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.nav-links a {
+  color: rgb(21, 21, 68);
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 1000;
+}
+
+.login-form {
+  background-color: #c5cbc4;
+  padding: 30px;
+  border-radius: 30px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkbox label {
+  margin-left: 5px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1dabcf;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #1594b8;
+}
+
+.links {
+  margin-top: 15px;
+}
+
+.links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-image {
+  margin-top: 30px;
+}
+
+.login-image img {
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+footer {
+  background: #2d4c41;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-top input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 25px 0 0 25px;
+  border: none;
+}
+
+.footer-top button {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+}
+
+.footer-cols {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.footer-cols div {
+  flex: 1;
+  margin: 10px 30px;
+}
+
+footer h4, footer h3 {
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-cols {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,626 @@
+.carousel-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 35px;
+    max-width: 1200px;
+    margin-top: 50px;
+    
+}
+
+.carousel-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('/assets/Backgroubd.jpg') center/cover no-repeat;
+    filter: blur(8px);
+    opacity: 0.4; 
+    z-index: 0;
+}
+
+.carousel-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+.carousel-section .image-container,
+.carousel-section .details-container {
+    flex: 1;
+}
+
+.carousel-section .image-container {
+    min-width: 280px;
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.carousel-section .details-container .Title {
+    max-width: 90%;
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.carousel-section .details-container .Min-head {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.carousel-section .details-container .Search-bar {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.carousel-section .details-container input{
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--secondary-color);
+}
+
+.carousel-section .details-container button{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    transform: translate(-30%);
+    border: 2px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--text-secondary-color);
+}
+
+.details-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.carousel-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+/*FEATURES*/
+
+/*IMAGE*/
+.features {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 60px;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.feature-box {
+  background-color: #f5f7fa;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 220px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  background-color: #ffc107;
+  border-radius: 50% 50% 0% 50%;
+  transform: rotate(45deg);
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+  transform: rotate(-45deg);
+}
+
+/*PRODUCTS_CONTAINER*/
+.products-container{
+    display: felx;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+}
+
+.products-container .products-options-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products-container .options-container{
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+.products-container .title{
+    font-size: 30px;
+    max-width: 200px;
+}
+
+.products-container .options{
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    max-width: 100px;
+    flex: 1;
+    text-align: center;
+    color:var(--text-dark-grey);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.products-container .active{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/*products-item-container*/
+.product-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.item-container {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.item-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.item-container .read-more{
+  font-size: inherit;
+  background-color: inherit;
+  color: black;
+  border: none;
+}
+
+.banner {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  color: #333;
+}
+
+.description {
+  font-size: 14px;
+  padding: 0 10px 10px 10px;
+  color: #666;
+  flex-grow: 1;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e67e22;
+}
+
+.cta-container button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.cta-container button:hover {
+  background:var(--primary-color);
+}
+
+.client {
+  padding: 40px;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.client-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.sub-title1 {
+  color: #7db400;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.title1 {
+  font-size: 36px;
+  color: #2d3e50;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav-btn {
+  border: 2px solid orange;
+  background: transparent;
+  color: green;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.client-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.client-card {
+  background-color: #f5f8fa;
+  border-radius: 12px;
+  padding: 25px;
+  width: 600px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.client-description {
+  font-size: 16px;
+  color: #607d8b;
+  line-height: 1.6;
+}
+
+.client-card hr {
+  margin: 20px 0;
+  border: none;
+  height: 1px;
+  background-color: orange;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.client-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.client-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #2d3e50;
+}
+
+.client-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.stars {
+  color: #8bc34a;
+  font-size: 16px;
+}
+
+.quote-icon {
+  font-size: 40px;
+  color: orange;
+  font-weight: bold;
+}
+
+
+footer {
+  background-color: #2e7d32;
+  color: white;
+  padding: 40px 30px 20px;
+  margin-top: 50px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.footer-top input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 6px;
+  border: none;
+}
+
+.footer-top button {
+  padding: 10px 20px;
+  background-color: #c0f5a9;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+.footer-cols {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-cols div h4, .footer-cols div h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-cols div p {
+  margin: 5px 0;
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.review {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  color: #666;
+}
+
+.tab-menu {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+.tab {
+  padding-bottom: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab.active {
+  color: #b6e100;
+  border-bottom: 2px solid orange;
+}
+
+.Descriptions p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.calories table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.calories td {
+  padding: 12px;
+  background-color: #f5f7f9;
+  font-size: 16px;
+}
+
+.calories td:first-child {
+  font-weight: 600;
+  color: #666;
+  width: 50%;
+}
+
+
+/* =====================
+   Mobile First Styling
+   ===================== */
+
+/* Tablets and below (≤ 1024px) */
+@media (max-width: 1024px) {
+  .carousel-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .carousel-section .details-container .Title {
+    font-size: 32px;
+  }
+
+  .features {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .feature-box {
+    width: 45%;
+  }
+
+  .products-container .products-options-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Large Mobiles and below (≤ 768px) */
+@media (max-width: 768px) {
+  header .info-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .carousel-section {
+    flex-direction: column;
+  }
+
+  .carousel-section .details-container .Title {
+    font-size: 26px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-box {
+    width: 80%;
+  }
+
+  .products-container .options-container {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .client-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .client-card {
+    width: 90%;
+  }
+
+  .footer-cols {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Small Mobiles (≤ 480px) */
+@media (max-width: 480px) {
+  .carousel-section .details-container .Title {
+    font-size: 22px;
+  }
+
+  .carousel-section .details-container input {
+    width: 100%;
+  }
+
+  .carousel-section .details-container button {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .feature-box {
+    width: 100%;
+  }
+
+  .products-container .title {
+    font-size: 22px;
+  }
+
+  .options {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .item-container {
+    font-size: 14px;
+  }
+
+  .client-card {
+    padding: 15px;
+  }
+
+  footer .footer-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer .footer-top input {
+    width: 100%;
+  }
+
+  footer .footer-top button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thaja Mart</title>
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/shop.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<header>
+  <div class="info-container">
+    <div class="address-container">
+      <p class="address">
+        JNTU Metro Piller No:678, Hyderabad, India.
+      </p>
+      <p class="email-address">
+        thajafruitmart@gmail.com
+      </p>
+    </div>
+    <div class="policy-container">
+      <p class="privacy">
+        <a href="">Privacy Policy</a>
+      </p> /
+      <p class="terms">
+        <a href="">Terms Of Use</a>
+      </p> /
+      <p class="refund-policy">
+        <a href="">Refund Policy</a>
+      </p>
+    </div>
+  </div>
+  <div class="nav-container">
+    <div class="title">ORGANIC</div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./shop.html">Shop</a></li>
+        <li><a href="./shop-details.html">Shop-Details</a></li>
+        <li><a href="">Blogs</a></li>
+      </ul>
+    </nav>
+    <div class="user-details-container">
+      <ul>
+        <li>
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </li>
+        <li>
+          <a href="./wishlist.html">
+            <button>
+              <i class="fa-solid fa-heart"></i>
+              <sup id="wishlistCount">0</sup>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="./cart.html">
+            <button>
+              <i class="fa-solid fa-cart-plus"></i>
+              <sup id="cartCount">0</sup>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="/forms/login-form.html">
+            <button><i class="fa-solid fa-users"></i></button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- Shop Banner -->
+<section class="shop-banner">
+  <h1>Welcome to Our Shop</h1>
+  <p>Find fresh and organic fruits & vegetables at the best prices</p>
+</section>
+
+<!-- Filter + Product Layout -->
+<div class="container">
+  <aside class="sidebar">
+    <h2>Fresh fruits shop</h2>
+    <div class="search-box">
+      <input type="text" placeholder="keywords">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <h3>Categories</h3>
+    <ul class="categories">
+      <li><i class="fas fa-apple-alt"></i> Beauty <span>(3)</span></li>
+      <li><i class="fas fa-apple-alt"></i> Fragrances <span>(5)</span></li>
+      <li><i class="fas fa-apple-alt"></i> Strawberry <span>(2)</span></li>
+      <li><i class="fas fa-apple-alt"></i> Banana <span>(8)</span></li>
+      <li><i class="fas fa-apple-alt"></i> Pumpkin <span>(5)</span></li>
+    </ul>
+
+    <h3>Price</h3>
+    <input type="range" min="0" max="100" value="0">
+    <span>0</span>
+    <h3>Additional</h3>
+    <ul class="filter-options">
+      <li><input type="radio" name="filter"> Organic</li>
+      <li><input type="radio" name="filter"> Fresh</li>
+      <li><input type="radio" name="filter"> Sales</li>
+      <li><input type="radio" name="filter"> Discount</li>
+      <li><input type="radio" name="filter"> Expired</li>
+    </ul>
+
+    <h3>Featured products</h3>
+    <div class="featured-products">
+      <div class="featured-item">
+        <img src="images/bananna.jpg" alt="Big Banana">
+        <div>
+          <h4>Big Banana</h4>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="price">
+            <span class="new">$2.99</span>
+            <span class="old">$4.11</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-item">
+        <img src="images/straberry.jpg" alt="Strawberry">
+        <div>
+          <h4>Strawberry</h4>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price">
+            <span class="new">$2.99</span>
+            <span class="old">$4.11</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-item">
+        <img src="images/broccoli.jpg" alt="Broccoli">
+        <div>
+          <h4>Broccoli</h4>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price">
+            <span class="new">$2.99</span>
+            <span class="old">$4.11</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="btn">
+      <button class="button">View More</button>
+    </div>
+    <div class="fresh-fruits-banner">
+      <img src="https://themewagon.github.io/fruitables/img/banner-fruits.jpg" alt="Fresh Fruits Banner" />
+      <div class="banner-text">
+        <p>Fresh<br>Fruits<br>Banner</p>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="top-bar">
+      <label for="sort">Default Sorting:</label>
+      <select id="sort">
+        <option value="nothing">Nothing</option>
+      </select>
+    </div>
+
+    <!-- Products dynamically injected here -->
+    <section class="product-items-container" id="displayProducts"></section>
+
+    <div class="pagination">
+      <button>&laquo;</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>&raquo;</button>
+    </div>
+  </main>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-top">
+    <input type="email" placeholder="Your Email" />
+    <button>Subscribe Now</button>
+  </div>
+  <div class="footer-cols">
+    <div>
+      <h3>Fruitables</h3>
+      <p>Fresh products</p>
+    </div>
+    <div>
+      <h4>Shop Info</h4>
+      <p>About Us</p>
+      <p>Contact Us</p>
+      <p>Privacy Policy</p>
+    </div>
+    <div>
+      <h4>Account</h4>
+      <p>My Account</p>
+      <p>Wishlist</p>
+      <p>Shopping Cart</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Email: example@gmail.com</p>
+      <p>Phone: +0123 4567 8910</p>
+    </div>
+  </div>
+  <p class="copyright">
+    &copy; 2025 PurePluck Fruitables. All rights reserved.
+  </p>
+</footer>
+</body>
+<script src="./script/shop.js"></script>
+</html>
