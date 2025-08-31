@@ -481,136 +481,46 @@ footer .copyright {
   width: 50%;
 }
 
-@media (max-width: 1024px) {
-  .carousel-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .carousel-section .details-container .Title {
-    font-size: 32px;
-  }
-
-  .features {
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .feature-box {
-    width: 45%;
-  }
-
-  .products-container .products-options-container {
-    flex-direction: column;
-    gap: 15px;
-  }
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #333;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  z-index: 1000;
+  opacity: 0.9;
+  animation: fadeInOut 2s ease forwards;
 }
 
-@media (max-width: 768px) {
-  header .info-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
-  }
+.notification.success { background: green; }
+.notification.error { background: red; }
+.notification.info { background: orange; }
 
-  .nav-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .carousel-section {
-    flex-direction: column;
-  }
-
-  .carousel-section .details-container .Title {
-    font-size: 26px;
-  }
-
-  .features {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feature-box {
-    width: 80%;
-  }
-
-  .products-container .options-container {
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .client-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .client-card {
-    width: 90%;
-  }
-
-  .footer-cols {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
 }
 
-/* Small Mobiles (≤ 480px) */
-@media (max-width: 480px) {
-  .carousel-section .details-container .Title {
-    font-size: 22px;
-  }
 
-  .carousel-section .details-container input {
-    width: 100%;
-  }
-
-  .carousel-section .details-container button {
-    font-size: 16px;
-    padding: 8px 12px;
-  }
-
-  .feature-box {
-    width: 100%;
-  }
-
-  .products-container .title {
-    font-size: 22px;
-  }
-
-  .options {
-    font-size: 14px;
-    padding: 6px;
-  }
-
-  .item-container {
-    font-size: 14px;
-  }
-
-  .client-card {
-    padding: 15px;
-  }
-
-  footer .footer-top {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  footer .footer-top input {
-    width: 100%;
-  }
-
-  footer .footer-top button {
-    width: 100%;
-  }
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1100;
 }
+
+#toast-container .notification {
+  position: relative;
+  min-width: 200px;
+}
+
+
+

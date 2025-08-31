@@ -71,31 +71,46 @@ function generateItemCard(product) {
 
 // Add to Cart
 function addToCart(product) {
+  const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+  if (!activeUser) {
+    showNotification("Please login before adding the products", "error");
+    return;
+  }
+
   const existing = cart.find((item) => item.id === product.id);
   if (existing) {
-    existing.quantity = Number(existing.quantity) + 1; // ✅ ensure it's a number
+    existing.quantity = Number(existing.quantity) + 1;
   } else {
     cart.push({
       id: product.id,
       title: product.title,
-      price: Number(product.price), // ✅ ensure price is a number
+      price: Number(product.price),
       images: product.images,
       quantity: 1,
     });
   }
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCartCount();
+  showNotification(`${product.title} added to cart`, "success");
 }
 
 // Add to Wishlist
 function addToWishlist(product, btn) {
+  const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+  if (!activeUser) {
+    showNotification("Please login before adding the products", "error");
+    return;
+  }
+
   const exists = wishlist.find((item) => item.id === product.id);
   if (!exists) {
     wishlist.push(product);
     btn.querySelector("i").style.color = "red";
+    showNotification(`${product.title} added to wishlist`, "success");
   } else {
     wishlist = wishlist.filter((item) => item.id !== product.id);
     btn.querySelector("i").style.color = "black";
+    showNotification(`${product.title} removed from wishlist`, "warning");
   }
   localStorage.setItem("wishlist", JSON.stringify(wishlist));
   updateWishlistCount();
@@ -103,7 +118,7 @@ function addToWishlist(product, btn) {
 
 // Update counts
 function updateCartCount() {
-  const totalItems = cart.reduce((sum, item) => sum + Number(item.quantity || 0), 0); // ✅ prevents NaN
+  const totalItems = cart.reduce((sum, item) => sum + Number(item.quantity || 0), 0);
   if (cartCountElement) cartCountElement.textContent = totalItems;
 }
 
@@ -112,3 +127,71 @@ function updateWishlistCount() {
 }
 
 fetchProducts();
+
+const activeUsersContainer = document.getElementById("activeUsers");
+
+// Render active user
+function renderActiveUsers(triggeredByLogout = false) {
+  const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+  activeUsersContainer.innerHTML = "";
+
+  if (!activeUser) {
+    activeUsersContainer.innerHTML = "<p>No active user.</p>";
+
+    if (triggeredByLogout) {
+      showNotification("No active user.", "error");
+    }
+    return;
+  }
+
+  const div = document.createElement("div");
+  div.classList.add("user-card");
+  div.innerHTML = `
+      <span>${activeUser}</span>
+      <button onclick="logoutUser()">Logout</button>
+    `;
+  activeUsersContainer.appendChild(div);
+}
+
+// Logout user
+function logoutUser() {
+  const username = JSON.parse(localStorage.getItem("activeUser"));
+  localStorage.removeItem("activeUser");
+
+  renderActiveUsers(true);
+  showNotification(`${username} logged out`, "error");
+}
+
+// Login user
+function loginUser(username) {
+  const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+
+  if (!activeUser) {
+    localStorage.setItem("activeUser", JSON.stringify(username));
+    renderActiveUsers();
+    showNotification(`${username} logged in`, "success");
+  } else {
+    showNotification(`${activeUser} is already logged in`, "warning");
+  }
+}
+
+// Initial load
+renderActiveUsers();
+
+
+// ------------------- Toast Notification -------------------
+function showNotification(message, type = "info") {
+  let notification = document.createElement("div");
+  notification.className = `toast ${type}`;
+  notification.innerText = message;
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+    notification.classList.add("show");
+  }, 100);
+
+  setTimeout(() => {
+    notification.classList.remove("show");
+    setTimeout(() => notification.remove(), 500);
+  }, 3000);
+}
